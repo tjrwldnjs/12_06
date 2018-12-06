@@ -31,3 +31,25 @@ linknd_t* create_node(int value ){
 	 return ndPtr;  
 	 
 } 
+
+void addTail(int value){
+	
+	linknd_t *ndPtr, *newPtr;
+	
+	if (list == NULL)
+	{
+		return;
+	}
+	else
+	{
+		ndPtr = list;
+		while (ndPtr->next != NULL )
+			{
+				ndPtr = ndPtr->next;
+			}
+	}
+	
+	newPtr = create_node(value);
+	ndPtr->next = newPtr; //새로 만든 노드를 가리키게 한다. 
+	
+}
