@@ -73,5 +73,24 @@ void print_list(void){
 	}
 }
 
+void print_node(int n){
+	
+	linknd_t *ndPtr;
+	int i=0;
+	
+	ndPtr = (linknd_t*)list->next;
+	while(ndPtr != NULL)
+	{
+		i++;
+		if(i == n)
+		{
+			printf("%ith value : %i\n", i, ndPtr->data);
+			break;
+		}
+		ndPtr = ndPtr->next;
+	}
+	
+}
+
 
 
