@@ -53,3 +53,25 @@ void addTail(int value){
 	ndPtr->next = newPtr; //새로 만든 노드를 가리키게 한다. 
 	
 }
+
+void genList(void){ //실체생성 
+	
+	list = create_node(0);
+	
+	return;
+}
+
+void print_list(void){
+	
+	linknd_t *ndPtr;
+	
+	ndPtr = list->next;
+	while(ndPtr != NULL)
+	{
+		printf("%i ", ndPtr->data);
+		ndPtr = ndPtr->next;
+	}
+}
+
+
+
